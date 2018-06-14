@@ -35,6 +35,66 @@
      transform: rotate(720deg);
    }
  }
+ @keyframes pulsar {
+	 0% {
+		  transform: scale(1.0)
+	 }
+	 50% {
+		  transform: scale(0.5)
+	 }
+	 100% {
+		  transform: scale(1.0)
+	 }
+ }
+
+ @keyframes crescer {
+	 0% {
+		  transform: scale(1.0)
+	 }
+	 50% {
+		  transform: scale(1.5)
+	 }
+	 100% {
+		  transform: scale(1.0)
+	 }
+ }
+
+ @keyframes pular {
+	0% {
+		 transform: translateY(0) scale(1.0) translateX(0);
+	}
+	10% {
+		 transform: translateY(-5%) scale(1.05) translateX(-5%);
+	}
+	20% {
+		 transform: translateY(-10%) scale(1.10) translateX(0);
+	}
+	30% {
+		 transform: translateY(-15%) scale(1.15) translateX(5%);
+	}
+	40% {
+		 transform: translateY(-20%) scale(1.2) translateX(0);
+	}
+	50% {
+		 transform: translateY(-20%) scale(1.2) translateX(-5%);
+	}
+	60% {
+		 transform: translateY(-20%) scale(1.2) translateX(0);
+	}
+	70% {
+		 transform: translateY(-15%) scale(1.15) translateX(5%);
+	}
+	80% {
+		 transform: translateY(-10%) scale(1.10) translateX(0);
+	}
+	90% {
+		 transform: translateY(-5%) scale(1.05) translateX(-5%);
+	}
+	100% {
+		 transform: translateY(0) scale(1.0) translateX(0);
+	}
+ }
+
 
 .agitado {
   animation: agitar 1000ms infinite; /* IE 10+, Fx 29+ */
@@ -45,13 +105,25 @@
   animation: alegria 1000ms 1 ease-in-out; /* IE 10+, Fx 29+ */
   animation-delay: 0ms;
 }
-.alimentado img {}
+.alimentado img {
+	border: 2px solid green;
+}
 
-.perturbado {}
-.perturbado img {}
+.perturbado {
 
-.instinto-selvagem {}
-.instinto-selvagem img {}
+}
+.perturbado img {
+	animation: pulsar 300ms infinite; /* IE 10+, Fx 29+ */
+	border: 2px solid red;
+}
+
+.instinto-selvagem {
+
+}
+.instinto-selvagem img {
+	animation: pular 500ms infinite; /* IE 10+, Fx 29+ */
+	border: 2px solid red;
+}
 
 /*
  * Exercício 3: Criar uma imagem sprite com as imagens dos botões de controle
